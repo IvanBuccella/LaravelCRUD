@@ -23,11 +23,11 @@ class ItemController extends Controller
     {
         $item = Item::find($id);
 
-        if ($item) {
-            $item = ItemResource::make($item);
+        if (!$item) {
+            return response()->json("Cannot find the specified item.", 400);
         }
 
-        return response()->json($item);
+        return response()->json(ItemResource::make($item));
     }
 
     public function create(Request $request)
