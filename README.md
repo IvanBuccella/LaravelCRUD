@@ -59,8 +59,8 @@ $ docker-compose up
 
 You can test the different endpoints with [Postman](https://www.postman.com/).
 
-- Get all items with pagination (GET): `http://localhost:80/items/{pageNumber?}`
-- Get one item (GET): `http://localhost:80/item/{id}`
-- Add an item (POST): `http://localhost:80/item`. Specify the `name` field in the body request.
-- Edit an item (PUT): `http://localhost:80/item/{id}`. Specify the `name` field in the body request.
-- Delete an item (DELETE): `http://localhost:80/item/{id}`
+- Get all items with pagination (GET): `http://localhost:${APP_PORT}/items/{pageNumber?}`
+- Get one item (GET): `http://localhost:${APP_PORT}/item/{id}`
+- Add an item (POST): `http://localhost:${APP_PORT}/item`. Specify the `name` field in the body request.
+- Edit an item (PUT): `http://localhost:${APP_PORT}/item/{id}`. Specify the `name` field in the body request.
+- Delete an item (DELETE): `http://localhost:${APP_PORT}/item/{id}`
